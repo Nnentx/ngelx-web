@@ -1280,3 +1280,21 @@ footer{
     grid-template-columns:1fr;
   }
 }
+html{
+  scroll-padding-top:90px;
+}
+
+@media(max-width:620px){
+  .store{
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .store > span:last-child{
+    font-size:15px;
+  }
+
+  .store.play > span:last-child{
+    white-space:nowrap;
+  }
+}
