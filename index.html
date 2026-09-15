@@ -54,6 +54,121 @@
         width:100px;
       }
     }
+    /* ANDROID KURULUM - INLINE */
+
+.install-section{
+  background:#ffffff;
+}
+
+.install-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.install-card{
+  padding:22px;
+  border:1px solid #e8edf5;
+  border-radius:20px;
+  background:#ffffff;
+  box-shadow:0 8px 26px rgba(15,23,42,.05);
+}
+
+.install-number{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#0066ff,#00dff5,#7c3aed);
+  color:#fff;
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+.install-card h3{
+  margin:0 0 8px;
+}
+
+.install-card p{
+  margin:0;
+  color:#667085;
+  font-size:14px;
+}
+
+
+/* SSS - INLINE */
+
+.faq-section{
+  background:#f8fafc;
+}
+
+.faq-list{
+  max-width:850px;
+  margin:auto;
+}
+
+.faq-item{
+  background:#fff;
+  border:1px solid #e8edf5;
+  border-radius:16px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+
+.faq-item summary{
+  cursor:pointer;
+  padding:18px 20px;
+  font-weight:800;
+  list-style:none;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-item summary::after{
+  content:"+";
+  float:right;
+  font-size:22px;
+  color:#2563eb;
+}
+
+.faq-item[open] summary::after{
+  content:"−";
+}
+
+.faq-item p{
+  margin:0;
+  padding:0 20px 18px;
+  color:#667085;
+}
+
+@media(max-width:900px){
+  .install-steps{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:620px){
+  .install-steps{
+    grid-template-columns:1fr;
+  }
+
+  .install-card{
+    padding:18px;
+  }
+
+  .faq-item summary{
+    padding:16px;
+    font-size:15px;
+  }
+
+  .faq-item p{
+    padding:0 16px 16px;
+    font-size:14px;
+  }
+}
   </style>
 </head>
 
