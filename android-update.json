@@ -2,12 +2,12 @@
   "schema": 1,
   "package": "com.nnentx.ngelx_app",
   "abi": "arm64-v8a",
-  "version": "1.0.337",
-  "build": 567,
-  "size": 47594283,
-  "sha256": "b736dc335e6fe76504a2894494238ac8950b2aae728a7666ccb378b3c1ef3bb3",
-  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.337-build567-test/NgelX-1.0.337-Build-567.apk",
-  "notes": "Referans videoya göre Ludo yerleşimi; hizalı taşlar, görünür Başlat ve güvenilir ayrılma. Duyurular ve PK düzeltmeleri korunur.",
-  "testedSource": "3b1884860f9ee458b0daba284bdc638cc84155ae",
-  "buildRun": 40189872161
+  "version": "1.0.338",
+  "build": 568,
+  "size": 47599751,
+  "sha256": "76c5fc3f3643b751b04a76c59d150767874974d2ee19e8c95364dae5bfb128d8",
+  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.338-build568-test/NgelX-1.0.338-Build568.apk",
+  "notes": "Ludo sohbeti ve davet listesindeki alt taşmalar düzeltildi; yenileme ve yeni oyun seçenekleri eklendi. Makine, rastgele eşleşme ve 6 haneli oda kodları için oyun sunucusu güncellemesi bekleniyor.",
+  "testedSource": "c7f57803b8097d1b71d7b74b4978ddba7e26eb7d",
+  "buildRun": 40214934625
 }
