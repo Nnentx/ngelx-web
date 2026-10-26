@@ -2,12 +2,12 @@
   "schema": 1,
   "package": "com.nnentx.ngelx_app",
   "abi": "arm64-v8a",
-  "version": "1.0.342",
-  "build": 572,
-  "size": 48671470,
-  "sha256": "65818622e57b746405858aa28ef3055102b06c8aa80a968b3fe5819c7164604c",
-  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.342-build572-test/NgelX-1.0.342-Build572.apk",
-  "notes": "Ludo Klasik ve Power görsel iyileştirmeleri, büyük ve kesilmeyen taşlar, aynı karede taşların ayrılması, zar ve Power düğmelerine dokunma uyarıları, toplanan hediyelerin başka kareye taşınması, daha akıllı makine hamleleri. Önceki NgelX özellikleri korunmuştur.",
-  "testedSource": "46919dee1059e1a89b711b9e643b1418d6b42df0",
-  "buildRun": 40241297810
+  "version": "1.0.343",
+  "build": 573,
+  "size": 48668586,
+  "sha256": "4b0ddff862746775e6a86bca5ea639019aa439836f95cae587dbd460078dd5cb",
+  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.343-build573-test/NgelX-1.0.343-Build573.apk",
+  "notes": "Ludo genişletilmiş oyun tahtası, karelere sığan ve üst üste görünmeyen taşlar, daha küçük zar ve güç kontrolleri, yeni oyun arka planı; çip/elmas ve oyuncu level bilgileri için arayüz. Mevcut sohbet, Ludo ve diğer uygulama özellikleri korunur.",
+  "testedSource": "e4b6ece0dbab9c856769abe52bc4ce72701ca849",
+  "buildRun": 40286383224
 }
