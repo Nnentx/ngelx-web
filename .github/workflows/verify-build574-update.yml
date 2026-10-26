@@ -1,0 +1,39 @@
+name: Verify Build574 live in-app updater
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-build574-update.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Confirm in-app manifest resolves to NgelX-hosted Build574 APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          for try in $(seq 1 20); do
+            if curl -fsSL --max-time 12 -H 'Cache-Control: no-cache' \
+              "https://ngelxsocial.com/android-update.json?check=574-$try" \
+              -o /tmp/ngelx-update.json; then
+              if python3 - <<'PY'
+          import json
+          j=json.load(open('/tmp/ngelx-update.json'))
+          assert j['schema']==1
+          assert j['package']=='com.nnentx.ngelx_app'
+          assert j['abi']=='arm64-v8a'
+          assert j['version']=='1.0.344' and j['build']==574
+          assert j['size']==48670786
+          assert j['sha256']=='45c8065d7c063a5aa0f9b3cb4bf4a0e9a1ab9e02c48d8ea39c45fcd8102d4391'
+          assert j['url']=='https://ngelxsocial.com/downloads/NgelX-1.0.344-Build574.apk'
+          print('PASS: NgelX live updater serves Build574 with a first-party download')
+          PY
+              then exit 0; fi
+            fi
+            sleep 8
+          done
+          echo 'FAIL: Live update manifest not updated or reachable' >&2
+          exit 1
