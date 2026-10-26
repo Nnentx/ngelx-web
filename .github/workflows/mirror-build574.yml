@@ -1,0 +1,39 @@
+name: Host verified NgelX Build574 APK on the app site
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/mirror-build574.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ngelx-build574-mirror
+  cancel-in-progress: false
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify and copy signed Build574 without redirecting the phone to GitHub
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          curl --fail --location --retry 4 --retry-delay 4 --connect-timeout 25 \
+            'https://github.com/Nnentx/Ngelx/releases/download/v1.0.344-build574-test/NgelX-1.0.344-Build574.apk' \
+            --output downloads/NgelX-1.0.344-Build574.apk
+          test "$(stat -c%s downloads/NgelX-1.0.344-Build574.apk)" -eq 48670786
+          printf '%s  %s\n' \
+            '45c8065d7c063a5aa0f9b3cb4bf4a0e9a1ab9e02c48d8ea39c45fcd8102d4391' \
+            'downloads/NgelX-1.0.344-Build574.apk' | sha256sum -c -
+          touch .nojekyll
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add downloads/NgelX-1.0.344-Build574.apk .nojekyll
+          if ! git diff --cached --quiet; then
+            git commit -m 'Host verified Build574 signed APK from NgelX website'
+            git push origin HEAD:main
+          fi
