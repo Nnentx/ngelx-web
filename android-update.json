@@ -2,12 +2,12 @@
   "schema": 1,
   "package": "com.nnentx.ngelx_app",
   "abi": "arm64-v8a",
-  "version": "1.0.343",
-  "build": 573,
-  "size": 48668586,
-  "sha256": "4b0ddff862746775e6a86bca5ea639019aa439836f95cae587dbd460078dd5cb",
-  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.343-build573-test/NgelX-1.0.343-Build573.apk",
-  "notes": "Ludo genişletilmiş oyun tahtası, karelere sığan ve üst üste görünmeyen taşlar, daha küçük zar ve güç kontrolleri, yeni oyun arka planı; çip/elmas ve oyuncu level bilgileri için arayüz. Mevcut sohbet, Ludo ve diğer uygulama özellikleri korunur.",
-  "testedSource": "e4b6ece0dbab9c856769abe52bc4ce72701ca849",
-  "buildRun": 40286383224
+  "version": "1.0.344",
+  "build": 574,
+  "size": 48670786,
+  "sha256": "45c8065d7c063a5aa0f9b3cb4bf4a0e9a1ab9e02c48d8ea39c45fcd8102d4391",
+  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.344-build574-test/NgelX-1.0.344-Build574.apk",
+  "notes": "Ludo: Tek oynanabilir taş otomatik ilerler; birden fazla taşta seçim sende kalır. Power modunda +1 ödülü toplanınca başka uygun kareye taşınır. Daha dolgun parlak taşlar, küçük artı simgeleri, sade alt kontroller. Önceki uygulama özellikleri korunur.",
+  "testedSource": "21bc6d539331d456b4bbdf315940a5fe917e913d",
+  "buildRun": 40291524551
 }
