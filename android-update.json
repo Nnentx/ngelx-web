@@ -2,12 +2,13 @@
   "schema": 1,
   "package": "com.nnentx.ngelx_app",
   "abi": "arm64-v8a",
-  "version": "1.0.357",
-  "build": 587,
-  "size": 50237265,
-  "sha256": "be0d3093a60c3f439a683dc3df778f0c270665644388837c582b0cd4a7aed36b",
-  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.357-build587/NgelX-1.0.357-Build587.apk",
-  "notes": "Ludo GO tek dokunuşta bir kez zar atar; hamle yoksa sıra diğer oyuncuya geçer. Zar olasılıkları tüm oyuncular ve makine için eşittir. Hediyeler onay sormadan gönderilir ve yan yana sıralanır. Kalp efektleri, alt yorum alanı, yarı yükseklikte kaydırılabilir sohbet, yeni emojiler, yönetici seçenekleri ve PK görünümü yenilendi.",
-  "testedSource": "b996a43665323126ba6016879fa45fd7902bef2c",
-  "buildRun": 41346489478
+  "version": "1.0.358",
+  "build": 588,
+  "size": 50872938,
+  "sha256": "852185e6ed679079c07a54444cc2aff76a58056aeee81c6df09849f36c36a730",
+  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.358-build588/NgelX-1.0.358-Build588.apk",
+  "notes": "Kamerasız yayında profil resmi, yuvarlak sesli oda mikrofonları, çoklu hediye akışı, kedi/kaplan görselleri ve hayvan/uzay sesleri eklendi. Moderatör yetkileri tamamlandı. PK sonunda sonuç ve WIN serisi gösterilir; yeni PK’de devam eder, yenilgide sıfırlanır.",
+  "testedSource": "f99ff01dc298102ce5e285f93144fb11edaa631d",
+  "buildRun": 41358497846,
+  "backendRun": 41359532044
 }
