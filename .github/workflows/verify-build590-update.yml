@@ -28,7 +28,7 @@ jobs:
               for value in [a.json(),b.json()]:
                 assert value['schema']==1 and value['package']=='com.nnentx.ngelx_app' and value['abi']=='arm64-v8a'
                 assert value['build']==590 and value['version']=='1.0.360' and value['size']==50873066 and value['sha256']==expected and value['url']==url
-              assert url in page.text and 'v1.0.360 · Yapı 589' in page.text
+              assert url in page.text and 'v1.0.360 · Yapı 590' in page.text
               accepted=True;break
             except (requests.RequestException,ValueError,AssertionError,KeyError):
               if attempt%5==0:print('Waiting for NgelXSocial CDN and Pages publication',flush=True)
