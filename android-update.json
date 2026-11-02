@@ -2,13 +2,14 @@
   "schema": 1,
   "package": "com.nnentx.ngelx_app",
   "abi": "arm64-v8a",
-  "version": "1.0.359",
-  "build": 589,
-  "size": 50871498,
-  "sha256": "ac12bcad83e4d25d671eadbb5e3b523e9f94764e960f00dd25a051d97dab4c27",
-  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.359-build589/NgelX-1.0.359-Build589.apk",
-  "notes": "PK puanı artık sunucudaki başlangıç ve bitiş anına göre hesaplanır; son saniyedeki hediye sayılır, süre sonrasındaki hediyeler sonucu değiştirmez. Erken bitiş yanıtında sessiz yeniden deneme, hediye yüklenirken sesi kapatma düzeltmesi ve büyük yazıya uyumlu yuvarlak sesli oda yerleri eklendi.",
-  "testedSource": "d0bb555c2679405ea03c8ad8d0c414d7fc6d109f",
-  "buildRun": 41403709092,
-  "backendRun": 41405178995
+  "version": "1.0.360",
+  "build": 590,
+  "size": 50873066,
+  "sha256": "ef49dab0566743bac94c483c2f6f3500c4e2e1314a8a0ad06b4a6a79e8f96e0d",
+  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.360-build590/NgelX-1.0.360-Build590.apk",
+  "notes": "Sesli oda ekranı referansa göre baştan düzenlendi: üstte küçük yayıncı/takip/dinleyici alanı, tek ekranda 3×3 büyük yuvarlak mikrofon yerleri, siyah zemin üzerinde yorum akışı ve sabit yazma/işlem çubuğu. Büyük bilgi kartı, kaydırmalı ana sayfa ve ayrı mavi sohbet kutusu kaldırıldı. Mikrofon, söz isteği, moderatör işlemleri, takip, PK, müzik, davet ve küçültme kontrolleri yeni yerleşime bağlandı. Büyük yazı ve klavye görünümü düzeltildi.",
+  "testedSource": "6a7342f992964cd597f76470151a1e80c7115599",
+  "buildRun": 41414031341,
+  "backendRun": 41405178995,
+  "visualRun": 41414886813
 }
