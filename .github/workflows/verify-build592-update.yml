@@ -1,0 +1,40 @@
+name: Verify Build592 public download and in-app update
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-build592-update.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Wait for exact live manifest and site download links
+        run: |
+          python3 - <<'PY'
+          import requests,time,hashlib
+          expected='1b3d233945f1a78af5f2ba6d3c92fe995e348915259ef3c246a0fa532fc52482'
+          url='https://github.com/Nnentx/Ngelx/releases/download/v1.0.362-build592/NgelX-1.0.362-Build592.apk'
+          headers={'Cache-Control':'no-cache'}
+          accepted=False
+          for attempt in range(40):
+            try:
+              a=requests.get('https://ngelxsocial.com/android-update.json',headers=headers,timeout=12)
+              b=requests.get('https://ngelxsocial.com/android-update.json',params={'check':'592-'+str(time.time_ns())},headers=headers,timeout=12)
+              page=requests.get('https://ngelxsocial.com/',params={'check':'592-'+str(time.time_ns())},headers=headers,timeout=12)
+              for r in [a,b,page]:r.raise_for_status()
+              for value in [a.json(),b.json()]:
+                assert value['schema']==1 and value['package']=='com.nnentx.ngelx_app' and value['abi']=='arm64-v8a'
+                assert value['build']==592 and value['version']=='1.0.362' and value['size']==52745408 and value['sha256']==expected and value['url']==url
+              assert url in page.text and 'v1.0.362 · Yapı 592' in page.text
+              accepted=True;break
+            except (requests.RequestException,ValueError,AssertionError,KeyError):
+              if attempt%5==0:print('Waiting for NgelXSocial CDN and Pages publication',flush=True)
+              time.sleep(8)
+          assert accepted,'Live website or updater did not converge to the tested Build592'
+          r=requests.get(url,timeout=120);r.raise_for_status()
+          assert len(r.content)==52745408 and hashlib.sha256(r.content).hexdigest()==expected
+          print('PASS: website links, canonical in-app manifest and anonymous APK bytes match signed Build592')
+          PY
