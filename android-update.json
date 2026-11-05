@@ -2,13 +2,13 @@
   "schema": 1,
   "package": "com.nnentx.ngelx_app",
   "abi": "arm64-v8a",
-  "version": "1.0.362",
-  "build": 592,
-  "size": 52745408,
-  "sha256": "1b3d233945f1a78af5f2ba6d3c92fe995e348915259ef3c246a0fa532fc52482",
-  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.362-build592/NgelX-1.0.362-Build592.apk",
-  "notes": "Dört kişilik Ludo daveti üçüncü ve dördüncü oyuncuya açık kalır; masa dolunca oyun otomatik başlar. Zar dağılımı dört oyuncu için eşit dengelenir. Taş dokunuşları arka plan yenilemesini beklemez, hareketler hızlandırıldı. Hediyeler resimleriyle görünür: horoz ötüşü, balonlar, patlayan domates, iki saniyelik tam ekran ateş ve sesli su dökülmesi eklendi. Ses kapatma ve arka plana geçiş kontrolleri korundu. Nefes mavi tiki ve önceki sesli oda tasarımı korundu.",
-  "testedSource": "1e00f001567a1dd0d9cb46e965f050f8ab6fc872",
-  "buildRun": 41806779588,
-  "backendRun": 41808409559
+  "version": "1.0.363",
+  "build": 593,
+  "size": 52747880,
+  "sha256": "78718cee3e5071cf7065df42e56cffb8273036ff3418ac71be083ef7984b283e",
+  "url": "https://github.com/Nnentx/Ngelx/releases/download/v1.0.363-build593/NgelX-1.0.363-Build593.apk",
+  "notes": "Ludo taşı biraz yavaşlatıldı. Eşsiz dört kişilik arkadaş odasında ev sahibi iki oyuncuyla oyunu başlatabilir. İki kişilik klasik oyunda dengeli zar dağılımı etkin. Canlı yayında konuk daveti gizliliği ve yorum susturma menüsü düzeltildi.",
+  "testedSource": "b3e02d853818de7512e78c13282ff74ece2e27ce",
+  "buildRun": 42092523462,
+  "backendRun": 42095163593
 }
